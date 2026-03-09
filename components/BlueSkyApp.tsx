@@ -208,7 +208,7 @@ export default function BlueSkyApp() {
           {/* Amenities */}
           <div className="m-item-row">
             <span className="m-item-word">Amenities</span>
-            <div className="m-secondary">
+            <span className="m-secondary">
               <span>Rooftop Pool</span>
               <span className="m-pipe">|</span>
               <span>Wood Fired BBQ</span>
@@ -218,7 +218,7 @@ export default function BlueSkyApp() {
               <button className="m-link" onClick={() => { setMenuOpen(false); setInqUnit(null); setInqOpen(true) }}>
                 Inquire
               </button>
-            </div>
+            </span>
           </div>
 
           {/* Location */}
@@ -230,17 +230,17 @@ export default function BlueSkyApp() {
             style={{ textDecoration: 'none' }}
           >
             <span className="m-item-word">Location</span>
-            <div className="m-secondary">
+            <span className="m-secondary">
               <span>Calle Ecuador 1074, Puerto Vallarta, Mexico</span>
-            </div>
+            </span>
           </a>
 
           {/* Construction */}
           <div className="m-item-row">
             <span className="m-item-word">Construction</span>
-            <div className="m-secondary">
+            <span className="m-secondary">
               <span>Completion est. Spring 2026</span>
-            </div>
+            </span>
           </div>
 
           {/* Inquire */}
