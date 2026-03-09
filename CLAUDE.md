@@ -31,3 +31,7 @@ Minimal Next.js 14 app with static export. Almost all logic lives in a single cl
 - **Inquiry form**: Uses `mailto:gloria@blueskypv.com` — no backend or API routes.
 - **Debug mode**: Press `d` key in browser to toggle debug overlay showing zone boundaries.
 - **Prettier**: Semi-less, single quotes, trailing commas ES5, 100-char print width.
+
+## Workflow
+After making changes, remind Gregg to push with:
+git add . && git commit -m "describe change" && git push
