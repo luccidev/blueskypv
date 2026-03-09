@@ -260,7 +260,7 @@ export default function BlueSkyApp() {
 
           <div className="m-footer">
             <a href="https://hoa.blueskypv.com">Owners Portal →</a>
-            <a href="tel:+523221020952">+52 322 102 0952 — Gloria Palacios</a>
+            <span><a href="tel:+523221020952" style={{ color: 'inherit', textDecoration: 'none' }}>+52 322 102 0952</a> — Gloria Palacios</span>
           </div>
         </div>
       </div>
