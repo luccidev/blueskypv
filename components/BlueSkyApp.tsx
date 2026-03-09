@@ -206,7 +206,7 @@ export default function BlueSkyApp() {
           </div>
 
           {/* Amenities */}
-          <div className="m-item-row">
+          <div className="m-item-row" style={{ justifyContent: 'space-between' }}>
             <span className="m-item-word">Amenities</span>
             <span className="m-secondary">
               <span>Rooftop Pool</span>
@@ -224,6 +224,7 @@ export default function BlueSkyApp() {
           {/* Location */}
           <a
             className="m-item-row"
+            style={{ justifyContent: 'space-between' }}
             href="https://maps.google.com/?q=Calle+Ecuador+1074,+Puerto+Vallarta,+Mexico"
             target="_blank"
             rel="noopener noreferrer"
@@ -236,7 +237,7 @@ export default function BlueSkyApp() {
           </a>
 
           {/* Construction */}
-          <div className="m-item-row">
+          <div className="m-item-row" style={{ justifyContent: 'space-between' }}>
             <span className="m-item-word">Construction</span>
             <span className="m-secondary">
               <span>Completion est. Spring 2026</span>
