@@ -242,6 +242,7 @@ html, body {
   font-size: 0.72rem; letter-spacing: 0.12em;
   text-transform: uppercase; font-weight: 300; color: #888;
   text-align: right; margin-left: auto;
+  flex-shrink: 1; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
 }
 .m-pipe { color: #ccc; font-size: 0.75rem; font-weight: 200; }
 .m-link {
