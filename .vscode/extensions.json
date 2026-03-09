@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "dsznajder.es7-react-js-snippets",
+    "christian-kohler.path-intellisense",
+    "burkeholland.simple-react-snippets",
+    "formulahendry.auto-rename-tag",
+    "naumovs.color-highlight",
+    "eamodio.gitlens"
+  ]
+}
