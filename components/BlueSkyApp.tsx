@@ -22,6 +22,7 @@ export default function BlueSkyApp() {
   const [phone, setPhone] = useState('')
   const [selectedUnit, setSelectedUnit] = useState('')
   const [notes, setNotes] = useState('')
+  const [formErrors, setFormErrors] = useState({ firstName: false, email: false })
 
   const buildZones = useCallback(() => {
     const img = imgRef.current
@@ -80,6 +81,9 @@ export default function BlueSkyApp() {
   }
 
   const sendInquiry = () => {
+    const errors = { firstName: !firstName.trim(), email: !email.trim() }
+    setFormErrors(errors)
+    if (errors.firstName || errors.email) return
     const subject = encodeURIComponent(`BlueSky Residences Inquiry${selectedUnit ? ' — ' + selectedUnit : ''}`)
     const body = encodeURIComponent(
       `Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\nInterested in: ${selectedUnit}\n\nNotes:\n${notes}`
@@ -311,11 +315,17 @@ export default function BlueSkyApp() {
             <h3>Begin your<br /><em style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic' }}>conversation</em></h3>
             <p>We respond within 24 hours with floor plan drawings<br />and payment options.</p>
             <div className="ff-row">
-              <div className="ff"><input placeholder="First name" value={firstName} onChange={e => setFirstName(e.target.value)} /></div>
+              <div>
+                <div className="ff"><input placeholder="First name" value={firstName} onChange={e => { setFirstName(e.target.value); setFormErrors(fe => ({ ...fe, firstName: false })) }} /></div>
+                {formErrors.firstName && <div className="ff-error">Required</div>}
+              </div>
               <div className="ff"><input placeholder="Last name" value={lastName} onChange={e => setLastName(e.target.value)} /></div>
             </div>
             <div className="ff-row">
-              <div className="ff"><input type="email" placeholder="Email address" value={email} onChange={e => setEmail(e.target.value)} /></div>
+              <div>
+                <div className="ff"><input type="email" placeholder="Email address" value={email} onChange={e => { setEmail(e.target.value); setFormErrors(fe => ({ ...fe, email: false })) }} /></div>
+                {formErrors.email && <div className="ff-error">Required</div>}
+              </div>
               <div className="ff"><input type="tel" placeholder="Phone (optional)" value={phone} onChange={e => setPhone(e.target.value)} /></div>
             </div>
             <div className="ff">
