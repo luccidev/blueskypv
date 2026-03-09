@@ -206,42 +206,47 @@ export default function BlueSkyApp() {
           </div>
 
           {/* Amenities */}
-          <div className="m-item-row" style={{ justifyContent: 'space-between' }}>
+          <div className="m-item-row" style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
             <span className="m-item-word">Amenities</span>
-            <span className="m-secondary">
-              <span>Rooftop Pool</span>
-              <span className="m-pipe">|</span>
-              <span>Wood Fired BBQ</span>
-              <span className="m-pipe">|</span>
-              <span>Elevator</span>
-              <span className="m-pipe">|</span>
-              <button className="m-link" onClick={() => { setMenuOpen(false); setInqUnit(null); setInqOpen(true) }}>
-                Inquire
-              </button>
-            </span>
+            <div style={{ marginLeft: 'auto', textAlign: 'right', flexShrink: 0 }}>
+              <span className="m-secondary">
+                <span>Rooftop Pool</span>
+                <span className="m-pipe">|</span>
+                <span>Wood Fired BBQ</span>
+                <span className="m-pipe">|</span>
+                <span>Elevator</span>
+                <span className="m-pipe">|</span>
+                <button className="m-link" onClick={() => { setMenuOpen(false); setInqUnit(null); setInqOpen(true) }}>
+                  Inquire
+                </button>
+              </span>
+            </div>
           </div>
 
           {/* Location */}
           <a
             className="m-item-row"
-            style={{ justifyContent: 'space-between' }}
+            style={{ display: 'flex', justifyContent: 'space-between', width: '100%', textDecoration: 'none' }}
             href="https://maps.google.com/?q=Calle+Ecuador+1074,+Puerto+Vallarta,+Mexico"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ textDecoration: 'none' }}
           >
             <span className="m-item-word">Location</span>
-            <span className="m-secondary">
-              <span>Calle Ecuador 1074, Puerto Vallarta, Mexico</span>
-            </span>
+            <div style={{ marginLeft: 'auto', textAlign: 'right', flexShrink: 0 }}>
+              <span className="m-secondary">
+                <span>Calle Ecuador 1074, Puerto Vallarta, Mexico</span>
+              </span>
+            </div>
           </a>
 
           {/* Construction */}
-          <div className="m-item-row" style={{ justifyContent: 'space-between' }}>
+          <div className="m-item-row" style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
             <span className="m-item-word">Construction</span>
-            <span className="m-secondary">
-              <span>Completion est. Spring 2026</span>
-            </span>
+            <div style={{ marginLeft: 'auto', textAlign: 'right', flexShrink: 0 }}>
+              <span className="m-secondary">
+                <span>Completion est. Spring 2026</span>
+              </span>
+            </div>
           </div>
 
           {/* Inquire */}
