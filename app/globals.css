@@ -258,7 +258,7 @@ html, body {
   font-family: var(--font-sans); font-size: 0.72rem;
   letter-spacing: 0.12em; text-transform: uppercase;
   color: #888; font-weight: 300; margin-top: 1.5rem;
-  display: flex; gap: 2.5rem;
+  display: flex; justify-content: space-between; gap: 2.5rem;
 }
 .m-footer a { color: #888; text-decoration: none; transition: color 0.2s; }
 .m-footer a:hover { color: var(--gold); }
