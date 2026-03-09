@@ -275,6 +275,9 @@ export default function BlueSkyApp() {
           <span className="plus">+</span>
           <span>Close</span>
         </button>
+        <button className="overlay-close" style={{ left: 'auto', right: '2.8rem' }} onClick={() => { setInqOpen(false); setMenuOpen(true) }}>
+          <span>← Back</span>
+        </button>
         <div className="inq-grid">
           {/* LEFT */}
           <div className="inq-left">

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 
 const title = 'BlueSky Residences — Puerto Vallarta'
@@ -47,7 +48,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>{children}<Analytics /></body>
     </html>
   )
 }

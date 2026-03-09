@@ -169,7 +169,7 @@ html, body {
 
 /* ── OVERLAY BASE ── */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
+  from { opacity: 0; transform: translateY(6px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
@@ -177,10 +177,9 @@ html, body {
   position: fixed; inset: 0; background: var(--bg);
   z-index: 700;
   opacity: 0; pointer-events: none;
-  transform: translateY(8px);
-  transition: opacity 0.45s ease, transform 0.45s ease;
+  transition: opacity 0.2s ease;
 }
-.overlay.open { opacity: 1; pointer-events: all; transform: translateY(0); }
+.overlay.open { opacity: 1; pointer-events: all; animation: fadeIn 0.25s ease forwards; }
 
 .overlay-close {
   position: absolute; top: 2.5rem; left: 2.8rem;
@@ -188,7 +187,7 @@ html, body {
   font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
   cursor: pointer; font-weight: 300; color: var(--dark);
   background: none; border: none; padding: 0;
-  transition: color 0.2s; z-index: 1;
+  transition: color 0.2s, opacity 0.2s ease; z-index: 1;
 }
 .overlay-close:hover { color: var(--gold); }
 .overlay-close .plus { font-size: 1.1rem; transform: rotate(45deg); display: inline-block; }
