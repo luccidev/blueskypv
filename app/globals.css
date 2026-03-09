@@ -323,15 +323,22 @@ html, body {
 }
 .fsub:hover { background: var(--gold); }
 
+/* ── TABLET ── */
+@media (max-width: 900px) {
+  .m-item-word { font-size: clamp(2.2rem, 6vw, 3.5rem); }
+  .m-center { flex-wrap: wrap; gap: 0.4rem; }
+  .menu-inner { padding: 4rem 2.5rem; }
+  .inq-grid { flex-direction: column; padding: 2rem; }
+  .inq-left { width: 100%; }
+  .inq-right { width: 100%; border-left: none; padding-left: 0; padding-top: 2rem; }
+}
+
 /* ── MOBILE ── */
 @media (max-width: 640px) {
   .m-item-row { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
   .m-secondary { text-align: left; margin-left: 0; white-space: normal; }
-  .menu-inner { padding: 4rem 1.5rem; }
-  .m-item-word { font-size: clamp(2.2rem, 8vw, 3.5rem); }
-  .m-center { flex-wrap: wrap; gap: 0.4rem; }
-  .inq-grid { flex-direction: column; padding: 1.5rem; }
-  .inq-left { width: 100%; }
-  .inq-right { width: 100%; border-left: none; padding-left: 0; padding-top: 2rem; }
+  .menu-inner { padding: 3rem 1.5rem; }
+  .m-item-word { font-size: clamp(2rem, 8vw, 3rem); }
+  .m-center { flex-wrap: wrap; gap: 0.3rem; }
   .bar-top, .bar-bottom { font-size: 0.65rem; }
 }
